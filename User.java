@@ -54,6 +54,7 @@
     public boolean addFollowee(String name) {
         if (fCount == maxfCount) return false;
         if (follows(name)) return false;
+        if (this.name.equals(name)) return false;
         System.out.println("\n...Adding " + name + " to the follows list of " + this.name + "...");
         follows[fCount++] = name;
         System.out.println(this);
