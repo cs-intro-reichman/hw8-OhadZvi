@@ -43,8 +43,9 @@ public class Network {
         if (userCount == users.length) return false;
         if (getUser(name) != null) return false;
         System.out.println("\n...Adding User " + name + "...");
-        users[userCount++] = new User(name);
-        return false;
+        users[userCount] = new User(name);
+        userCount++;
+        return true;
     }
 
     /** Makes the user with name1 follow the user with name2. If successful, returns true.
